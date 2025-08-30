@@ -12,7 +12,7 @@ A full-stack e-commerce application built with **ReactJS + TailwindCSS** on the 
 
 🌐 Try it live here :  
 
-👉  [**Click here to open the app**](https://ecommercr.netlify.app)
+👉  [**Click here to open the app**](https://sadhana-e-commerce.netlify.app/)
 
 ## 🔥 Features
 
@@ -57,7 +57,7 @@ A full-stack e-commerce application built with **ReactJS + TailwindCSS** on the 
 1. Clone this repository :
 
 ```bash
-git clone https://github.com/SupakunZ/E-commerce.git
+git clone https://github.com/sadhanazy/E-commerce.git
 ```
 
 2. Navigate to the project folder and install dependencies :
@@ -99,7 +99,7 @@ npm run dev
 
 ## 🙋‍♂️ Contact
 
-Developed by **Supakun Thata**  
-📧 Email: supakunt.thata@gmail.com  
-🔗 GitHub: [SupakunZ](https://github.com/SupakunZ)
+Developed by **Sadhana Dash**  
+📧 Email: sadhanadash2005@gmail.com  
+🔗 GitHub: [Sadhana Dash](https://github.com/sadhanazy)
 
