@@ -1,0 +1,38 @@
+.cartitems-format-main p {
+  @apply flex justify-center;
+}
+.cartitems-format p {
+  @apply flex justify-center;
+}
+.cartitems-format div {
+  @apply flex justify-center;
+}
+@media (max-width: 1280px) {
+  .cartitems {
+    @apply m-[60px_50px];
+  }
+  .carticon-product-icon {
+    @apply h-[50px];
+  }
+  .cartitems-remove-icon {
+    @apply m-auto;
+  }
+  .cartitems-quantity {
+    @apply w-[40px] h-[30px];
+  }
+  .cartitems-down {
+    @apply my-[50px] flex-col gap-[80px];
+  }
+  .cartitems-total {
+    @apply m-0;
+  }
+  .cartitems-total button {
+    @apply max-w-[200px] h-[45px] text-[13px];
+  }
+  .cartitems-promobox {
+    @apply w-auto max-w-[500px] flex justify-between;
+  }
+  .cartitems-promobox button {
+    @apply w-[120px];
+  }
+}

@@ -1,0 +1,26 @@
+@media (max-width: 1280px) {
+  .relatedproducts h1 {
+    @apply text-[40px];
+  }
+  .relatedproducts hr {
+    @apply w-[160px] h-[4px];
+  }
+  .relatedproducts-item {
+    @apply gap-[25px] mt-[30px];
+  }
+}
+
+@media (max-width: 1024px) {
+  .relatedproducts {
+    @apply mb-[8rem];
+  }
+  .relatedproducts h1 {
+    @apply text-[30px];
+  }
+  .relatedproducts hr {
+    @apply w-[120px] h-[3px];
+  }
+  .relatedproducts-item {
+    @apply gap-[15px] mt-[20px];
+  }
+}
