@@ -17,7 +17,7 @@ const Navbar = () => {
           onClick={() => {
             localStorage.removeItem("auth-token");
             logout();
-            navigate("/"); // กลับไปหน้า home
+            navigate("/"); 
           }}
         >
           <ButtonStyle type={"Logout"} />

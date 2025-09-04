@@ -20,9 +20,9 @@ const paymentCreate = async (req, res) => {
   try {
     // create payment session
     const orderId = uuidv4(); // generate orderId
-    const exchangeRate = 35; // อัตราการแลกเปลี่ยน USD -> THB
+    const exchangeRate = 35; 
 
-    // Data Products ที่จะส่งไป
+    // Data Product
     const line_items = cart.map((item) => ({
       price_data: {
         currency: "thb",
@@ -33,20 +33,20 @@ const paymentCreate = async (req, res) => {
             `${
               item.id < 37 ? process.env.CLIENT_URL + item.image : item.image
             }`,
-          ], // เพิ่ม URL ที่ถูกต้อง
+          ], 
         },
         unit_amount: Math.round(item.new_price * exchangeRate * 100), // คูณ 100 เพื่อแปลงเป็นสตางค์
       },
       quantity: item.total,
     }));
 
-    // Data ที่จะส่งไปเพื่อขอ Link จ่ายเงิน Stripe
+    // Data ที
     const session = await stripe.checkout.sessions.create({
       payment_method_types: ["card"],
       line_items: line_items,
       mode: "payment",
-      success_url: `${process.env.CLIENT_URL}/payment?id=${orderId}`, //หน้าที่จะ redirect ไปหลังจ่ายเงินสำเร็จ
-      cancel_url: `${process.env.CLIENT_URL}/payment?id=${orderId}`, //หน้าที่จะ redirect ไปหลังยกเลิกจ่ายเงิน
+      success_url: `${process.env.CLIENT_URL}/payment?id=${orderId}`, 
+      cancel_url: `${process.env.CLIENT_URL}/payment?id=${orderId}`, 
     });
 
     // create order in database (name, address, session id, status)
@@ -128,7 +128,7 @@ const webHook = async (req, res) => {
         status: paymentSuccessData.status,
       };
 
-      // หา order จาก sessionId และ update status
+      // update status
       const result = await orderSchema.findOneAndUpdate(
         {
           session_id: sessionId,

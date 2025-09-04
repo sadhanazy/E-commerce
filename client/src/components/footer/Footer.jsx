@@ -57,8 +57,8 @@ const Footer = () => {
       <div className="foot-copyright flex flex-col items-center gap-[15px] w-[100%] mb-[15px] text-[#B2B2B2] text-[14px]">
         <hr className="w-[80%] border-none rounded-[10px] h-[1px] bg-[#222222]" />
         <p>
-          Copyright @ 2023 - All Right Reserved | made with ❤️ by{" "}
-          <p className="text-[#e53637] inline">Supakun Thata</p>
+          Copyright @ 2025 - All Right Reserved | made with ❤️ by{" "}
+          <p className="text-[#e53637] inline">Sadhana Dash</p>
         </p>
       </div>
     </div>

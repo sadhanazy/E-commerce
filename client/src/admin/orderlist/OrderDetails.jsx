@@ -11,7 +11,7 @@ const OrderDetails = () => {
   const { id } = useParams();
   const navigate = useNavigate();
   const [orderDetails, setorderDetails] = useState([]);
-  const { getAllOrders } = useContext(ShopContext); // เรียกใช้ data ใน
+  const { getAllOrders } = useContext(ShopContext); 
 
   const getOrderID = async () => {
     await axios(`${import.meta.env.VITE_APP_API}/api/payment/${id}`)

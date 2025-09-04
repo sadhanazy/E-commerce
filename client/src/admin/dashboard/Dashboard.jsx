@@ -15,7 +15,7 @@ const Dashboard = () => {
     getAllOrderAmount,
     getAllProductsAmount,
     productTotal,
-  } = useContext(ShopContext); // เรียกใช้ data ใน
+  } = useContext(ShopContext); 
 
   const [cartData, setCartData] = useState(null);
 

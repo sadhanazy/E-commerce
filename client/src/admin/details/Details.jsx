@@ -140,7 +140,7 @@ const Details = () => {
     });
   };
 
-  // Function get data จาก form
+  
   const changeHandler = (e) => {
     setProductDetails({ ...productDetails, [e.target.name]: e.target.value });
   };

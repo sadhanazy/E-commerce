@@ -4,15 +4,14 @@ const usersRouter = require("./routes/users");
 const paymentRouter = require("./routes/payment");
 const connectDB = require("./utils/db");
 const { webHook } = require("./controllers/payment");
-const multer = require("multer"); // Middleware ที่ช่วยจัดการการอัพโหลดไฟล์ในฝั่ง Node.js
+const multer = require("multer"); 
 const dotenv = require("dotenv").config();
 var cors = require("cors");
 const bodyParser = require("body-parser");
 
 const app = express();
 
-// Route สำหรับ Webhook
-// ใช้ express.raw() ใน middleware ที่เหมาะสม # เอามาไว้บนสุดเพื่อไม่ให้ app.use(express.json({ limit: "50mb" })) แปลง req.body เป็น Objects
+
 app.post("/api/webhook", express.raw({ type: "application/json" }), webHook);
 
 app.use(express.json({ limit: "50mb" }));
@@ -23,7 +22,7 @@ app.use(
     allowedHeaders: ["Content-Type", "Authorization"],
   })
 );
-// Middleware เพื่อแปลงข้อมูลฟอร์ม
+
 app.use(express.urlencoded({ limit: "50mb", extended: true }));
 
 app.use("/api/products", productsRouter);
